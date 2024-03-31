@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 10px;
+  width: 100%;
+
+  .desktop {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(#000, 0.5);
+
+    background: linear-gradient(
+      90deg,
+      rgba(#3d1300, 0.5) 0%,
+      rgba(#00243d, 0.5) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    max-width: 95%;
+    min-width: 95%;
+
+    padding: 0 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(#fff, 0.9);
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-weight: 400;
+      font-family: "Protest Riot";
+    }
+
+    nav {
+      ul {
+        display: flex;
+
+        li {
+          margin-left: 10px;
+          color: #fff;
+          cursor: pointer;
+          list-style: none;
+
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          font-weight: 600;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+          .wallet {
+            all: unset;
+
+            div {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

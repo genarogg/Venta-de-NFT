@@ -7,6 +7,7 @@ interface ImgBgProps {
   children: React.ReactNode;
   width?: string;
   height?: string;
+  styleBg?: React.CSSProperties;
 }
 
 const ImgBg: React.FC<ImgBgProps> = ({
@@ -15,6 +16,7 @@ const ImgBg: React.FC<ImgBgProps> = ({
   style,
   width,
   height,
+  styleBg,
 }) => {
   return (
     <div style={{ position: "relative", overflow: "hidden", width, height }}>
@@ -24,6 +26,7 @@ const ImgBg: React.FC<ImgBgProps> = ({
         objectFit="cover"
         placeholder="blur"
         fill={true}
+        style={{ ...styleBg }}
       />
       <div
         className="content"

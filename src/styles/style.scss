@@ -1,1 +1,5 @@
-@import "./lib/style"
+@import "./lib/style";
+@import "./global/variables";
+@import "./global/animaciones";
+@import "./global/global";
+@import "../components/views/home/style/home.scss";
