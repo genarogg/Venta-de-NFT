@@ -15,7 +15,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@img/*": ["./src/img/*"],
-      "@layout": ["./src/components/layout/Layout.tsx"],
+      "@layout": ["./src/components/layout/Layout.ts"],
+      "@view/*": ["./src/components/views/*"],
+      "@constant/*": ["./src/constants/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
