@@ -19,11 +19,7 @@ const Shop: React.FC<ShopProps> = () => {
   const { data: nfts } = useNFTs(contract);
 
   return (
-    <ImgBg
-      src={sliderPrincipal}
-      className="shop"
-
-    >
+    <ImgBg src={sliderPrincipal} className="shop">
       <Header />
       <main>
         <div className="titulo">
@@ -42,13 +38,7 @@ const Shop: React.FC<ShopProps> = () => {
             Loading...
           </div>
         ) : (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "10px",
-            }}
-          >
+          <div className="nft-container">
             {nfts?.map((nftItem) => (
               <NFT key={nftItem.metadata.id} nft={nftItem} />
             ))}
