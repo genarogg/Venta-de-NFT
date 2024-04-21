@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { StaticImageData } from "next/image";
+
 interface ImgBgProps {
   src: StaticImageData;
   style?: React.CSSProperties;
@@ -8,6 +9,8 @@ interface ImgBgProps {
   width?: string;
   height?: string;
   styleBg?: React.CSSProperties;
+  position?: "relative" | "absolute" | "fixed" | "sticky" | "static";
+  className?: string; // Agregamos className aquí
 }
 
 const ImgBg: React.FC<ImgBgProps> = ({
@@ -15,11 +18,19 @@ const ImgBg: React.FC<ImgBgProps> = ({
   children,
   style,
   width,
-  height,
+  height = "100dvh",
   styleBg,
+  position = "relative",
+  className, // Y aquí
 }) => {
   return (
-    <div style={{ position: "relative", overflow: "hidden", width, height }}>
+    <div
+      className={className} // Usamos className en el div padre
+      style={{
+        width,
+        height,
+      }}
+    >
       <Image
         src={src}
         alt="hola"
@@ -27,6 +38,8 @@ const ImgBg: React.FC<ImgBgProps> = ({
         placeholder="blur"
         fill={true}
         style={{ ...styleBg }}
+        id="shopBg"
+     
       />
       <div
         className="content"

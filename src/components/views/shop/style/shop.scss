@@ -1,0 +1,31 @@
+.shop {
+  .content {
+    padding-top: 75px;
+
+    display: flex;
+    justify-content: center;
+    main {
+      width: 95%;
+    }
+  }
+
+  #shopBg {
+    position: fixed !important;
+  }
+
+  .titulo {
+    color: #fff;
+    font-family: "Protest Riot";
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      padding-left: 20px;
+    }
+  }
+}

@@ -10,7 +10,7 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 
 const Home: React.FC<HomeProps> = () => {
   return (
-    <ImgBg src={sliderPrincipal} height="100dvh">
+    <ImgBg src={sliderPrincipal}>
       <Header />
       <main>
         <div className="content">
