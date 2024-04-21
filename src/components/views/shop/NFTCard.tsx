@@ -31,7 +31,7 @@ export default function NFTComponent({ nft }: Props) {
             src={nft.metadata.image}
             alt="Descripción de la imagen"
             objectFit="cover"
-            height={400}
+            height={360}
             width={360}
           />
         )}
