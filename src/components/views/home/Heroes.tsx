@@ -1,8 +1,28 @@
+import {
+  MediaRenderer,
+  useAddress,
+  useContract,
+  useContractRead,
+  useOwnedNFTs,
+} from "@thirdweb-dev/react";
 
+import { FARMER_ADDRESS, REWARDS_ADDRESS } from "@constant/contratos";
+import { ethers } from "ethers";
 
 interface HeroesProps {}
 
 const Heroes: React.FC<HeroesProps> = () => {
+  const address = useAddress();
+
+  const { contract: farmercontract } = useContract(FARMER_ADDRESS);
+  const { contract: rewardContract } = useContract(REWARDS_ADDRESS);
+
+  const { data: ownedFarmers } = useOwnedNFTs(farmercontract, address);
+
+  const { data: rewardBalance } = useContractRead(rewardContract, "balanceOf", [
+    address,
+  ]);
+
   return (
     <div>
       <h1>Heroes:</h1>

@@ -1,4 +1,4 @@
-import sliderPrincipal from "@img/slider-principal.jpg";
+import sliderPrincipal from "@img/bg-shop.jpg";
 import Header from "@/components/layout/Header";
 import ImgBg from "@/components/nano/ImgBg";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
