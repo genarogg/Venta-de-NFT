@@ -1,9 +1,12 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
+import React, { useEffect } from "react";
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Link from "next/link";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+ /*  const address = useAddress(); */
+
   return (
     <header className="header">
       <div className="desktop">
@@ -11,13 +14,13 @@ const Header: React.FC<HeaderProps> = () => {
         <nav>
           <ul>
             <li>
-              <a href="#">Play</a>
+              <a href="/">Play</a>
             </li>
             <li>
               <Link href="/shop">Shop</Link>
             </li>
             <li>
-              <ConnectWallet className="wallet" />
+              <ConnectWallet className="wallet" btnTitle="wallet" />
             </li>
           </ul>
         </nav>

@@ -1,4 +1,4 @@
-import { useContract, useNFTs } from "@thirdweb-dev/react";
+import { ConnectWallet, useContract, useNFTs } from "@thirdweb-dev/react";
 import { TOOLS_ADDRESS } from "@constant/contratos";
 import { NFT as NFTType } from "@thirdweb-dev/sdk";
 import Header from "@/components/layout/Header";
@@ -45,6 +45,8 @@ const Shop: React.FC<ShopProps> = () => {
           </div>
         )}
       </main>
+     
+      ;
     </ImgBg>
   );
 };

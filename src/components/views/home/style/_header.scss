@@ -55,6 +55,7 @@
           }
           .wallet {
             all: unset;
+            min-width: initial !important;
 
             div {
               display: none !important;
