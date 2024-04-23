@@ -1,11 +1,9 @@
-// Home.tsx
-
-import Image from "next/image";
 import sliderPrincipal from "@img/slider-principal.jpg";
 import Header from "@/components/layout/Header";
 import ImgBg from "@/components/nano/ImgBg";
-import { ConnectWallet, useWallet, useAddress } from "@thirdweb-dev/react";
-import { useEffect, useState } from "react";
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+
+import Heroes from "./Heroes";
 
 interface HomeProps {}
 
@@ -18,7 +16,7 @@ const Home: React.FC<HomeProps> = () => {
       <main>
         <div className="content">
           {address !== undefined ? (
-            <h1>Hola Mundo</h1>
+            <Heroes />
           ) : (
             <>
               <h2>Defender Warriors</h2>
