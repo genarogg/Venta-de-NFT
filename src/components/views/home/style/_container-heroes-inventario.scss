@@ -1,0 +1,13 @@
+.container-heroes-inventario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  /* @include card(100%); */
+  /* padding: 10px 20px; */
+
+
+  border-radius: 10px;
+    border: none;
+  /* border: 1px solid #fff; */
+}

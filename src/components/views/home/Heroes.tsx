@@ -9,6 +9,8 @@ import {
 import { FARMER_ADDRESS, REWARDS_ADDRESS } from "@constant/contratos";
 import { ethers } from "ethers";
 
+import Image from "next/image";
+
 interface HeroesProps {}
 
 const Heroes: React.FC<HeroesProps> = () => {
@@ -24,26 +26,30 @@ const Heroes: React.FC<HeroesProps> = () => {
   ]);
 
   return (
-    <div>
-      <h1>Heroes:</h1>
-      <div>
-        <div>
-          {ownedFarmers?.map((nft) => (
-            <div key={nft.metadata.id}>
-              <MediaRenderer
-                src={nft.metadata.image}
-                height="100%"
-                width="100%"
-              />
-            </div>
-          ))}
-        </div>
-        <div>
-          <p style={{ fontSize: "small", fontWeight: "bold" }}>$Balance:</p>
-          {rewardBalance && (
-            <p>{ethers.utils.formatUnits(rewardBalance, 18)}</p>
+    <div className="cardHeroes">
+      <div className="titulo">
+        <h2>Heroes:</h2>
+      </div>
+
+      {ownedFarmers?.map((nft) => (
+        <div className="img" key={nft.metadata.id}>
+          {nft.metadata.image && (
+            <Image
+              src={nft.metadata.image}
+              alt="NFT Image"
+              height={360}
+              width={360}
+              objectFit="cover"
+            />
           )}
         </div>
+      ))}
+
+      <div className="datos">
+        <p>
+          $Balance:{" "}
+          {rewardBalance && <>{ethers.utils.formatUnits(rewardBalance, 18)}</>}
+        </p>
       </div>
     </div>
   );

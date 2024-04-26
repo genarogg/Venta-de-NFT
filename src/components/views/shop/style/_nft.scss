@@ -1,27 +1,6 @@
 .nft {
   @include animationTimeline(--cardArticle, block, show);
-  max-width: 360px;
-
-  background: linear-gradient(
-    90deg,
-    rgba(61, 19, 0, 0.5) 0%,
-    rgba(0, 36, 61, 0.5) 100%
-  );
-
-  /* animation: gradient 3s ease infinite; */
-
-  backdrop-filter: blur(20px);
-
-  box-shadow: 0 0 5px #ddcd55, 0 0 2px #9ffef0, 0 0 10px #bc4450,
-    0 0 5px #18f1d5;
-
-  color: #fff;
-
-  .img {
-    img {
-      /* mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
-    }
-  }
+  @include card();
 
   .nombre {
     display: flex;

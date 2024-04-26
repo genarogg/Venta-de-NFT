@@ -4,6 +4,7 @@ import ImgBg from "@/components/nano/ImgBg";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 
 import Heroes from "./Heroes";
+import Inventary from "./Inventory";
 
 interface HomeProps {}
 
@@ -16,7 +17,10 @@ const Home: React.FC<HomeProps> = () => {
       <main>
         <div className="content">
           {address !== undefined ? (
-            <Heroes />
+            <div className="container-heroes-inventario">
+              <Heroes />
+              <Inventary />
+            </div>
           ) : (
             <>
               <h2>Defender Warriors</h2>
