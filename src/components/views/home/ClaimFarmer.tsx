@@ -1,9 +1,4 @@
-import {
-  MediaRenderer,
-  Web3Button,
-  useContract,
-  useContractMetadata,
-} from "@thirdweb-dev/react";
+import { MediaRenderer, Web3Button, useContract, useContractMetadata } from "@thirdweb-dev/react";
 import { FARMER_ADDRESS } from "@/constants/contratos";
 
 const ClaimFarmer = () => {
