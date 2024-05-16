@@ -8,6 +8,8 @@ import { NFT } from "@thirdweb-dev/sdk";
 import { STAKING_ADDRESS, TOOLS_ADDRESS } from "@/constants/contratos";
 import Link from "next/link";
 
+import Image from "next/image";
+
 type InventaryNFTProps = {
   nft: NFT[] | undefined;
 };
@@ -45,35 +47,28 @@ const InventaryNFT: React.FC<InventaryNFTProps> = ({ nft }) => {
   }
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "1rem",
-      }}
-    >
+    <div className="container-nft-comprados">
       {nft?.map((nft) => (
-        <div key={nft.metadata.id} style={{ padding: "1rem" }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
+        <div key={nft.metadata.id} className="nft-comprado">
+          {nft.metadata.image && (
+            <div className="img">
+              <Image
+                src={nft.metadata.image}
+                alt="NFT Image"
+                height={200}
+                width={200}
+              />
+            </div>
+          )}
+
+          <p className="titulo">{nft.metadata.name}</p>
+          <Web3Button
+            contractAddress={STAKING_ADDRESS}
+            action={() => stakeNFT(nft.metadata.id)}
+            className="nft-btn"
           >
-            <MediaRenderer
-              src={nft.metadata.image}
-              height="100px"
-              width="100px"
-            />
-            <p>{nft.metadata.name}</p>
-            <Web3Button
-              contractAddress={STAKING_ADDRESS}
-              action={() => stakeNFT(nft.metadata.id)}
-            >
-              Equip
-            </Web3Button>
-          </div>
+            Equip
+          </Web3Button>
         </div>
       ))}
     </div>

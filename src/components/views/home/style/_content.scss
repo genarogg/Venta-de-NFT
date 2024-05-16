@@ -1,11 +1,16 @@
+#bgHome {
+  position: fixed !important;
+}
+
 main {
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    min-height: 100dvh;
     flex-direction: column;
     color: #fff;
+    padding: 100px 0;
 
     h2 {
       margin: 0;

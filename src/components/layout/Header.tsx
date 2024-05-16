@@ -20,6 +20,9 @@ const Header: React.FC<HeaderProps> = () => {
               <Link href="/shop">Shop</Link>
             </li>
             <li>
+              <Link href="/withdraw">Withdraw</Link>
+            </li>
+            <li>
               <ConnectWallet className="wallet" btnTitle="wallet" />
             </li>
           </ul>

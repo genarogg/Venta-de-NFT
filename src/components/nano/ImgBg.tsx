@@ -9,6 +9,7 @@ interface ImgBgProps {
   width?: string;
   height?: string;
   styleBg?: React.CSSProperties;
+  idBg?: string;
   position?: "relative" | "absolute" | "fixed" | "sticky" | "static";
   className?: string; // Agregamos className aquí
 }
@@ -20,6 +21,7 @@ const ImgBg: React.FC<ImgBgProps> = ({
   width,
   height = "100dvh",
   styleBg,
+  idBg = "shopBg",
   position = "relative",
   className, // Y aquí
 }) => {
@@ -38,8 +40,7 @@ const ImgBg: React.FC<ImgBgProps> = ({
         placeholder="blur"
         fill={true}
         style={{ ...styleBg }}
-        id="shopBg"
-     
+        id={idBg}
       />
       <div
         className="content"

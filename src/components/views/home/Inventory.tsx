@@ -17,7 +17,7 @@ const Inventary: React.FC<InventaryProps> = () => {
 
   return (
     <div className="cardInventary">
-      <h1 style={{ marginBottom: "10px", color: "white" }}>Inventory:</h1>
+      <h2>Inventory:</h2>
       {!loadingOwnedTools && <InventaryNFT nft={ownedTools} />}
     </div>
   );
