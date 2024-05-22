@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = () => {
         <nav className={`hamburguesa ${isOpen ? "active" : ""}`}>
           <ul>
             <li>
-              <a href="/">Play</a>
+              <Link href="/">Play</Link>
             </li>
             <li>
               <Link href="/shop">Shop</Link>
