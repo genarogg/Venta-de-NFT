@@ -21,6 +21,7 @@ main {
       text-shadow: 0px 0px 20px hsl(0deg 0% 0%);
       font-family: "Protest Riot";
       font-weight: 400;
+      text-align: center;
     }
 
     P {
@@ -51,6 +52,28 @@ main {
           color: #fff;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    .content {
+      padding: 105px 0;
+      h2 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .content {
+      padding: 70px 0;
     }
   }
 }

@@ -7,3 +7,14 @@
 
   min-width: 83%;
 }
+
+
+@media screen and (max-width: 800px) {
+  .container-equipo {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: 94vw;
+  }
+}
